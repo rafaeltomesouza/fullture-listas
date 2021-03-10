@@ -1,0 +1,13 @@
+<section>
+    <form (submit)="save($event)">
+        <div class="area-text">
+            <label>Tarefa</label>
+            <input type="text" id="task" name="task" (input)="handleTask($event)" [value]="task" />
+        </div>
+        <div class="area-btn">
+            <button-action [titleButton]="titleButton"></button-action>
+        </div>
+        <list [dataList]="allTasks"></list>
+    </form>
+    <button-action [titleButton]="titleButtonList" (buttonEvent)="clear()"></button-action>
+</section>
