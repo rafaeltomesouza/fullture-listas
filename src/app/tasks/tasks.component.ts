@@ -16,8 +16,10 @@ class Tasks {
     }
  
     save(event: Event) {
-        event.preventDefault();
-        this.allTasks.push(this.task);
+        if (this.task) {
+            event.preventDefault();
+            this.allTasks.push(this.task);    
+        }
     }
 
     clear() {
